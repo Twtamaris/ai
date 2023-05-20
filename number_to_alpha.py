@@ -78,3 +78,101 @@ list1 = ["""580 100 007
 
 
 ]
+
+
+# Define the digit-to-letter mapping
+digit_to_letter = {
+    '0': 'z',
+    '1': 'a',
+    '2': 'b',
+    '3': 'c',
+    '4': 'd',
+    '5': 'e',
+    '6': 'f',
+    '7': 'g',
+    '8': 'h',
+    '9': 'i'
+}
+
+# Replace digits with letters in each string
+for i in range(len(list1)):
+    list1[i] = '\n'.join(
+        ''.join(digit_to_letter.get(c, c) for c in line)
+        for line in list1[i].split('\n')
+    )
+
+# Print the modified list
+for sudoku in list1:
+    print(sudoku)
+    print()
+#output
+    """
+ehz azz zzg
+zzz ezz zbf
+zzb gzd zzc
+zzz zza zzd
+azz zzz zzz
+zzd bzz zzz
+zzz zzz fzh
+gza zzc zzz
+zze dzz izz
+
+
+
+zza fbz zeg
+zzz zzz zzi
+zdz azz zzz
+zzz zfz dzz
+zcz zzg zfe
+zze zzz izz
+zzz zzz fzz
+hzz zzc zzz
+zzd zgz zba
+
+
+diz zcb zzz
+zzz aif dzz
+bah zdz fic
+ahz zbi zfz
+ifz zzz zzd
+zgd zzz hbz
+eza zhd bzf
+hzz zac izz
+zzz zzz zcz
+
+
+
+zzi zzz zfz
+zzz zae zdz
+zez zhz zzg
+hzz gzz bzz
+zfz zzh zcz
+igd zzb zze
+ezz zgz zzz
+zzh bez dzc
+fzz zdz hza
+
+
+
+zcz zzb zhz
+gzf zzz zzz
+zzb gzz zdz
+zbz ziz dzz
+zzz zzz zzz
+zaz zzc zez
+zdz zze azz
+zzz zzg fzz
+afz czz izz
+
+
+
+zzd gzz zze
+zbz zzz zhd
+zzh zzz zzz
+bzc zgz zzz
+zzz edh zzz
+fzz zbz zzz
+aiz zzz czz
+zzz izz zbz
+zzz zze gzz
+    """
